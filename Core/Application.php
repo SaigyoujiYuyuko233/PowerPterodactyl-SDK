@@ -32,26 +32,42 @@ class Application extends HttpCore {
      */
 
     public function getAllUser(){
-        $api_address = $this->addr."/users";
-        $path = $this->rootURL."/users";
+        $api_address = $this->addr . "/users";
 
         $http = new HttpCore();
-        $response = $http->sendRequest(HTTP_GET,$api_address,$path,$this->key,array());
+        $response = $http->sendRequest(HTTP_GET,$api_address,$this->key,array());
 
         return $response;
     }
 
 
     public function getAppointUser(int $id){
-        $api_address = $this->addr."/users/$id";
-        $path = $this->rootURL."/users/$id";
+        $api_address = $this->addr . "/users/$id";
 
         $http = new HttpCore();
-        $response = $http->sendRequest(HTTP_GET,$api_address,$path,$this->key,array());
+        $response = $http->sendRequest(HTTP_GET,$api_address,$this->key,array());
 
         return $response;
     }
 
+
+    public function createUser(array $argument){
+        $api_address = $this->addr . "/users";
+
+        $http = new HttpCore();
+        $response = $http->sendRequest(HTTP_POST,$api_address,$this->key, json_encode($argument));
+
+        return $response;
+    }
+
+    public function editUser(int $id, array $argument){
+        $api_address = $this->addr . "/users/$id";
+
+        $http = new HttpCore();
+        $response = $http->sendRequest(HTTP_PATCH,$api_address,$this->key, json_encode($argument));
+
+        return $response;
+    }
 
 
 }

@@ -41,6 +41,7 @@ class Pterodactyl{
         // 定义变量
         define("HTTP_GET","GET");
         define("HTTP_POST","POST");
+        define("HTTP_PATCH","PATCH");
         define("HTTP_DELETE","DELETE");
     }
 
@@ -63,7 +64,12 @@ class Pterodactyl{
 
 try{
     $sdk = new Pterodactyl("http://127.0.0.1:8000","JUIc43eUUeOdE2gBSmqaWCRuVpi1eFK2YqnZVqA6pBOHvGwz");
-    print_r($sdk->application()->getAppointUser(2));
+    print_r($sdk->application()->editUser(3,array(
+        'username' => "tesst-sdka",
+        'email' => "test@qwq.qwqa",
+        'first_name' => 'qasdwq',
+        'last_name' => "qwasdqqwq"
+    )));
 }catch (ArgumentNotValid $exception){
     echo $exception;
 }

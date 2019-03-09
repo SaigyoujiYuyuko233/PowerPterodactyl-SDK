@@ -23,25 +23,26 @@ class HttpCore{
      * @return array
      */
 
-    public function sendRequest(String $method,String $address,String $path,String $key,$data = array()){
+    public function sendRequest(String $method,String $address,String $key,$data = array()){
 
         $curl = curl_init($address);
 
         $header = array();
 
-        $header[] = "$method $path HTTP/1.1";
         $header[] = "User-Agent: PowerPterodactyl/1.0.0";
         $header[] = "Authorization: Bearer $key";
         $header[] = "Accept:application/json";
+        $header[] = "Content-Type: application/json";
 
         // 如果是POST
-        if ($method == "POST"){
+        if ($method == "POST" || $method == "PATCH"){
             curl_setopt($curl,CURLOPT_POSTFIELDS,$data);
         }
 
 
         curl_setopt($curl, CURLOPT_HEADER, true);
         curl_setopt($curl,CURLOPT_HTTPHEADER,$header);
+        curl_setopt ($curl, CURLOPT_CUSTOMREQUEST, $method);
         curl_setopt($curl,CURLOPT_RETURNTRANSFER,true);
 
         $response = curl_exec($curl);
