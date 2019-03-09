@@ -12,11 +12,11 @@
 include_once "Models/HttpCore.php";
 include_once "Exception/ArgumentNotValid.php";
 
-include_once "Core\Application.php";
+include_once "Core\Application\ApplicationController.php";
 
 use Exception\ArgumentNotValid;
 
-use Core\Application;
+use Core\ApplicationController;
 
 
 class Pterodactyl{
@@ -47,7 +47,7 @@ class Pterodactyl{
 
 
     public function application(){
-        return new Application($this->url,$this->key);
+        return new ApplicationController($this->url,$this->key);
     }
 
 
@@ -64,9 +64,9 @@ class Pterodactyl{
 
 try{
     $sdk = new Pterodactyl("http://127.0.0.1:8000","JUIc43eUUeOdE2gBSmqaWCRuVpi1eFK2YqnZVqA6pBOHvGwz");
-    print_r($sdk->application()->editUser(3,array(
-        'username' => "tesst-sdka",
-        'email' => "test@qwq.qwqa",
+    print_r($sdk->application()->getUser()->editUser(3,array(
+        'username' => "tessta-sdka",
+        'email' => "test@qwq.qasdwqa",
         'first_name' => 'qasdwq',
         'last_name' => "qwasdqqwq"
     )));

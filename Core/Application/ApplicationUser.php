@@ -3,27 +3,26 @@
  * ProjectName: PowerPterodactylAPI.
  * Author: SaigyoujiYuyuko
  * QQ: 3558168775
- * Date: 2019/3/2
- * Time: 13:57
+ * Date: 2019/3/9
+ * Time: 22:52
  *
  * Copyright © 2019 SaigyoujiYuyuko. All rights reserved.
  */
 
-namespace Core;
+namespace application\ApplicationUser;
 
 use Models\HttpCore;
 
-class Application extends HttpCore {
+class ApplicationUser{
 
-    protected $rootURL = "/api/application";
+    protected $api_prefix = "/users";
     protected $key = null;
     protected $addr = "http://127.0.0.1";
 
     public function __construct(String $addr,String $key){
-        $this->addr = $addr.$this->rootURL;
+        $this->addr = $addr . $this->api_prefix;
         $this->key = $key;
     }
-
 
     /**
      * That's mean getting all the user info
@@ -32,7 +31,7 @@ class Application extends HttpCore {
      */
 
     public function getAllUser(){
-        $api_address = $this->addr . "/users";
+        $api_address = $this->addr;
 
         $http = new HttpCore();
         $response = $http->sendRequest(HTTP_GET,$api_address,$this->key,array());
@@ -42,7 +41,7 @@ class Application extends HttpCore {
 
 
     public function getAppointUser(int $id){
-        $api_address = $this->addr . "/users/$id";
+        $api_address = $this->addr . "/$id";
 
         $http = new HttpCore();
         $response = $http->sendRequest(HTTP_GET,$api_address,$this->key,array());
@@ -52,7 +51,7 @@ class Application extends HttpCore {
 
 
     public function createUser(array $argument){
-        $api_address = $this->addr . "/users";
+        $api_address = $this->addr;
 
         $http = new HttpCore();
         $response = $http->sendRequest(HTTP_POST,$api_address,$this->key, json_encode($argument));
@@ -61,13 +60,12 @@ class Application extends HttpCore {
     }
 
     public function editUser(int $id, array $argument){
-        $api_address = $this->addr . "/users/$id";
+        $api_address = $this->addr . "/$id";
 
         $http = new HttpCore();
         $response = $http->sendRequest(HTTP_PATCH,$api_address,$this->key, json_encode($argument));
 
         return $response;
     }
-
 
 }
