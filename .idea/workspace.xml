@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b9a12c8d-c193-498e-ade2-6710c66b93cb" name="默认更改列表" comment="">
-      <change afterPath="$PROJECT_DIR$/Core/Application/ApplicationUser.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/Application.php" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Application/ApplicationController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Application/ApplicationUser.php" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Application/ApplicationUser.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Models/HttpCore.php" beforeDir="false" afterPath="$PROJECT_DIR$/Models/HttpCore.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Pterodactyl.php" beforeDir="false" afterPath="$PROJECT_DIR$/Pterodactyl.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -28,20 +27,20 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="md" value="4" />
-          <entry key="php" value="13" />
+          <entry key="php" value="14" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="Markdown" value="4" />
-          <entry key="PHP" value="13" />
+          <entry key="PHP" value="14" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="13" />
           <entry key="md" value="3736" />
-          <entry key="php" value="3297" />
+          <entry key="php" value="3678" />
           <entry key="txt" value="1" />
         </counts>
       </usages-collector>
@@ -49,7 +48,7 @@
         <counts>
           <entry key="Bash" value="14" />
           <entry key="Markdown" value="3722" />
-          <entry key="PHP" value="3297" />
+          <entry key="PHP" value="3678" />
           <entry key="PLAIN_TEXT" value="14" />
         </counts>
       </usages-collector>
@@ -63,11 +62,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Pterodactyl.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="67" column="29" selection-start-line="67" selection-start-column="29" selection-end-line="67" selection-end-column="29" />
+            <state relative-caret-position="465">
+              <caret line="88" column="55" selection-start-line="88" selection-start-column="55" selection-end-line="88" selection-end-column="55" />
             </state>
           </provider>
         </entry>
@@ -75,8 +74,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Core/Application/ApplicationController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="29" column="30" selection-start-line="29" selection-start-column="30" selection-end-line="29" selection-end-column="30" />
+            <state relative-caret-position="360">
+              <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
               <folding>
                 <element signature="e#208#256#0#PHP" expanded="true" />
               </folding>
@@ -84,11 +83,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Core/Application/ApplicationUser.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="630">
-              <caret line="65" column="39" selection-start-line="65" selection-start-column="39" selection-end-line="65" selection-end-column="39" />
+            <state relative-caret-position="465">
+              <caret line="85" column="5" lean-forward="true" selection-start-line="85" selection-start-column="5" selection-end-line="85" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Models/HttpCore.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="435">
+              <caret line="102" lean-forward="true" selection-start-line="102" selection-end-line="102" />
             </state>
           </provider>
         </entry>
@@ -107,11 +115,11 @@
         <option value="$PROJECT_DIR$/Exception/ArgumentNotVaild.php" />
         <option value="$PROJECT_DIR$/Exception/ArgumentNotValid.php" />
         <option value="$PROJECT_DIR$/Core/ApiBase.php" />
-        <option value="$PROJECT_DIR$/Models/HttpCore.php" />
         <option value="$PROJECT_DIR$/Core/Application.php" />
         <option value="$PROJECT_DIR$/Core/Application/ApplicationController.php" />
         <option value="$PROJECT_DIR$/Core/Application/ApplicationUser.php" />
         <option value="$PROJECT_DIR$/Pterodactyl.php" />
+        <option value="$PROJECT_DIR$/Models/HttpCore.php" />
       </list>
     </option>
   </component>
@@ -230,12 +238,12 @@
       <workItem from="1550910730985" duration="5575000" />
       <workItem from="1551446844501" duration="27953000" />
       <workItem from="1552043680803" duration="408000" />
-      <workItem from="1552131707786" duration="6535000" />
+      <workItem from="1552131707786" duration="7666000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="40471000" />
+    <option name="totallyTimeSpent" value="41602000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -296,34 +304,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Models/HttpCore.php">
+    <entry file="file://$PROJECT_DIR$/Pterodactyl.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-435">
-          <caret line="39" column="9" lean-forward="true" selection-start-line="39" selection-start-column="9" selection-end-line="39" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Core/Application/ApplicationUser.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="630">
-          <caret line="65" column="39" selection-start-line="65" selection-start-column="39" selection-end-line="65" selection-end-column="39" />
+        <state relative-caret-position="465">
+          <caret line="88" column="55" selection-start-line="88" selection-start-column="55" selection-end-line="88" selection-end-column="55" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Core/Application/ApplicationController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="29" column="30" selection-start-line="29" selection-start-column="30" selection-end-line="29" selection-end-column="30" />
+        <state relative-caret-position="360">
+          <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
           <folding>
             <element signature="e#208#256#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Pterodactyl.php">
+    <entry file="file://$PROJECT_DIR$/Models/HttpCore.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="67" column="29" selection-start-line="67" selection-start-column="29" selection-end-line="67" selection-end-column="29" />
+        <state relative-caret-position="435">
+          <caret line="102" lean-forward="true" selection-start-line="102" selection-end-line="102" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Core/Application/ApplicationUser.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="85" column="5" lean-forward="true" selection-start-line="85" selection-start-column="5" selection-end-line="85" selection-end-column="5" />
         </state>
       </provider>
     </entry>

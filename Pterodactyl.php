@@ -64,12 +64,30 @@ class Pterodactyl{
 
 try{
     $sdk = new Pterodactyl("http://127.0.0.1:8000","JUIc43eUUeOdE2gBSmqaWCRuVpi1eFK2YqnZVqA6pBOHvGwz");
-    print_r($sdk->application()->getUser()->editUser(3,array(
-        'username' => "tessta-sdka",
-        'email' => "test@qwq.qasdwqa",
-        'first_name' => 'qasdwq',
-        'last_name' => "qwasdqqwq"
-    )));
+
+    /*
+    print_r($sdk->application()->getUser()->createUser(array(
+        "username" => "Test-Sdk",
+        "email" => "Test@test.com",
+        "first_name" => "Test",
+        "last_name" => "SDK",
+        "password" => "123123"
+    )));*/
+
+    /*
+    print_r($sdk->application()->getUser()->editUser(4,array(
+        "username" => "Test-Sdaak",
+        "email" => "Test@test.com",
+        "first_name" => "Test",
+        "last_name" => "SDK",
+        "password" => "123123"
+    )));*/
+
+    //print_r($sdk->application()->getUser()->getAppointUser(4));
+    //print_r($sdk->application()->getUser()->getAllUser());
+
+    print_r($sdk->application()->getUser()->deleteUser(4));
+
 }catch (ArgumentNotValid $exception){
     echo $exception;
 }

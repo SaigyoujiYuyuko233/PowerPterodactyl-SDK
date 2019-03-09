@@ -24,6 +24,12 @@ class ApplicationUser{
         $this->key = $key;
     }
 
+
+    /**
+     * SDK开始========================================================================================
+     */
+
+
     /**
      * That's mean getting all the user info
      *
@@ -59,11 +65,22 @@ class ApplicationUser{
         return $response;
     }
 
+
     public function editUser(int $id, array $argument){
         $api_address = $this->addr . "/$id";
 
         $http = new HttpCore();
         $response = $http->sendRequest(HTTP_PATCH,$api_address,$this->key, json_encode($argument));
+
+        return $response;
+    }
+
+
+    public function deleteUser(int $id){
+        $api_address = $this->addr . "/$id";
+
+        $http = new HttpCore();
+        $response = $http->sendRequest(HTTP_DELETE,$api_address,$this->key);
 
         return $response;
     }

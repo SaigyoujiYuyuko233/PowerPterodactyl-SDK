@@ -86,6 +86,7 @@ class HttpCore{
         }
 
         $return['http_response'] = $http_response_header;
+        $return['http_response']['http_code'] = explode(" ",$http_response_header['status'])[1];
         $return['data'] = json_decode(substr($response, $headerSize, strlen($response)),true);
         $return['error'] = $http_error;
 
@@ -94,6 +95,10 @@ class HttpCore{
 
         if ($http_code == "404"){
             $return['data'] = '404 Not Found';
+        }
+
+        if ($http_code == "204"){
+            $return['data'] = '204-Successfully';
         }
 
         return $return;
