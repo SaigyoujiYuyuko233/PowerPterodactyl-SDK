@@ -86,7 +86,15 @@ try{
     //print_r($sdk->application()->getUser()->getAppointUser(4));
     //print_r($sdk->application()->getUser()->getAllUser());
 
-    print_r($sdk->application()->getUser()->deleteUser(4));
+    //print_r($sdk->application()->getUser()->deleteUser(4));
+    //print_r($sdk->application()->getNode()->getAllNodes());
+    //print_r($sdk->application()->getNode()->getAppointNode(2));
+    //print_r($sdk->application()->getNode()->getAppointNode(2));
+
+    print_r($sdk->application()->getNode()->createNode(array(
+
+    )));
+
 
 }catch (ArgumentNotValid $exception){
     echo $exception;

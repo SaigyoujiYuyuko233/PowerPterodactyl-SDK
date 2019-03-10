@@ -3,8 +3,8 @@
  * ProjectName: PowerPterodactylAPI.
  * Author: SaigyoujiYuyuko
  * QQ: 3558168775
- * Date: 2019/3/9
- * Time: 22:52
+ * Date: 2019/3/10
+ * Time: 8:55
  *
  * Copyright © 2019 SaigyoujiYuyuko. All rights reserved.
  */
@@ -13,9 +13,9 @@ namespace application;
 
 use Models\HttpCore;
 
-class ApplicationUser{
+class ApplicationNode{
 
-    protected $api_prefix = "/users";
+    protected $api_prefix = "/nodes";
     protected $key = null;
     protected $addr = "http://127.0.0.1";
 
@@ -29,14 +29,7 @@ class ApplicationUser{
      * SDK开始========================================================================================
      */
 
-
-    /**
-     * That's mean getting all the user info
-     *
-     * @return array
-     */
-
-    public function getAllUsers(){
+    public function getAllNodes(){
         $api_address = $this->addr;
 
         $http = new HttpCore();
@@ -46,7 +39,7 @@ class ApplicationUser{
     }
 
 
-    public function getAppointUser(int $id){
+    public function getAppointNode(int $id){
         $api_address = $this->addr . "/$id";
 
         $http = new HttpCore();
@@ -56,31 +49,11 @@ class ApplicationUser{
     }
 
 
-    public function createUser(array $argument){
+    public function createNode(array $argument){
         $api_address = $this->addr;
 
         $http = new HttpCore();
         $response = $http->sendRequest(HTTP_POST,$api_address,$this->key, json_encode($argument));
-
-        return $response;
-    }
-
-
-    public function editUser(int $id, array $argument){
-        $api_address = $this->addr . "/$id";
-
-        $http = new HttpCore();
-        $response = $http->sendRequest(HTTP_PATCH,$api_address,$this->key, json_encode($argument));
-
-        return $response;
-    }
-
-
-    public function deleteUser(int $id){
-        $api_address = $this->addr . "/$id";
-
-        $http = new HttpCore();
-        $response = $http->sendRequest(HTTP_DELETE,$api_address,$this->key);
 
         return $response;
     }

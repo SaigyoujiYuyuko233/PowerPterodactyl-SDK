@@ -12,8 +12,11 @@
 namespace Core;
 
 require_once "ApplicationUser.php";
+require_once "ApplicationNode.php";
 
-use application\ApplicationUser\ApplicationUser;
+use application\ApplicationNode;
+use application\ApplicationUser;
+
 use Models\HttpCore;
 
 class ApplicationController extends HttpCore {
@@ -31,6 +34,9 @@ class ApplicationController extends HttpCore {
         return new ApplicationUser($this->addr,$this->key);
     }
 
+    public function getNode(){
+        return new ApplicationNode($this->addr,$this->key);
+    }
 
 
 
